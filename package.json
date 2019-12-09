@@ -1,0 +1,39 @@
+{
+  "name": "fix-the-web",
+  "version": "1.0.0",
+  "description": "Let's make the web great again.",
+  "main": "cc.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cagataycali/fix-the-web.git"
+  },
+  "keywords": [
+    "peer",
+    "to",
+    "peer",
+    "p2p",
+    "gun",
+    "decentralized",
+    "cc"
+  ],
+  "author": "Çağatay Çalı",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cagataycali/fix-the-web/issues"
+  },
+  "homepage": "https://github.com/cagataycali/fix-the-web#readme",
+  "devDependencies": {
+    "husky": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "cp cc.js example/public/cc.js"
+    }
+  }
+}

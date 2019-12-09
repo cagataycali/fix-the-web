@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Fix The WEB</title>
+    <script src="cc.js"></script>
+</head>
+
+<body>
+    <button onclick="p2p()">P2P</button>
+    <button onclick="normal()">Normal</button>
+    <script>
+        // Don't forget peer URL.
+        cc(["https://cc-gun.herokuapp.com"])
+
+        function p2p() {
+            fetch('http://localhost:3000/api')
+                .then(data => data.json())
+                .then(data => alert('Data loaded from peer: ' + JSON.stringify(data))) // P2P - Without Network Request.
+        }
+
+        function normal() {
+            fetch('http://localhost:3000/api-non-p2p')
+                .then(data => data.json())
+                .then(data => alert('Data loaded from server: ' + JSON.stringify(data)))
+        }
+    </script>
+</body>
+
+</html>
