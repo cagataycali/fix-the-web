@@ -1,0 +1,16 @@
+{
+    "name": "cc",
+    "description": "Let's make the web great again.",
+    "repository": "https://github.com/cagataycali/fix-the-web",
+    "logo": "https://cagatay.js.org/spider.png",
+    "keywords": [
+        "peer",
+        "to",
+        "peer",
+        "p2p",
+        "gun",
+        "decentralized",
+        "cc"
+    ],
+    "website": "https://cagatay.me"
+}

@@ -7,7 +7,8 @@ const SEA = Gun.SEA;
 
 const gun = Gun(["https://cc-gun.herokuapp.com/gun"])
 const user = gun.user()
-const pair = {
+// Generated with: await SEA.pair()
+const pair = { // DO NOT PUBLISH THIS ANYONE
     epriv: "V5EzJhGjXm1k_mKmHwS8FI3hzP1-pNAYg38LzhA6DUQ",
     epub: "nwXLRQTgk43kNpGk5WnZ3Mf1TW5s-oRpR-ep-JoCq28.wcbBXgpwFiuJy7o2AP_VLFHH_2AjDaYjeteLlDEXfZI",
     priv: "ubmM22xW4b7nYdEnPDciUzKV20icdhxpVF7BmGNVs3Q",
