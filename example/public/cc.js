@@ -13,7 +13,7 @@ function cc(options) {
     if (!window.xhook) {
         load('https://unpkg.com/xhook@latest/dist/xhook.min.js');
         // lite jQuery shim
-        return setTimeout(cc, 99);
+        return setTimeout(_ => cc(options), 99);
     }
 
     function load(src, tag) {
