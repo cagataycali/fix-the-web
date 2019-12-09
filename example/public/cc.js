@@ -48,7 +48,7 @@ async function init() {
 
 // Client to client code.
 async function c2(options) {
-    const gun = Gun(PushSubscriptionOptions)
+    const gun = Gun(options)
     const public = await init()
 
     if (!public) {
