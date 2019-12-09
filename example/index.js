@@ -15,18 +15,17 @@ const pair = { // DO NOT PUBLISH THIS ANYONE
     pub: "9B5FS6vH8-Z1ZjGmFdwiZArGHuTj6q1zExLs9zFIRKc.JO_gRqJdlLQ2ZRwUcWcG64zvve0Z2GeDDSItCxjnv5M"
 }
 
+user.auth(pair)
+
 function fullUrl(req) {
     return url.format({
-        protocol: req.protocol,
+        protocol: 'http',
         host: req.get('host'),
         pathname: req.originalUrl
     });
 }
 
-const publish = (request, response) => {
-    user.auth(pair)
-    user.get(fullUrl(request)).put(response)
-}
+const publish = (request, response) => user.get(fullUrl(request)).put(response)
 
 app.use(express.static('public'))
 
@@ -44,6 +43,7 @@ app.get('/api', (request, response) => {
     const payload = {
         hello: "peer"
     }
+    console.log(fullUrl(request), payload, 'published network.')
     publish(request, payload)
 
     response.json(payload)

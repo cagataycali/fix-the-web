@@ -76,7 +76,11 @@ async function c2(options) {
     }
 
     xhook.before(async (request, callback) => {
-        get(request.url, data => {
+        var url = new URL(request.url)
+        url = 'http://' + url.host + url.pathname
+        console.log(`%c ${url} trying for peer network...`, 'background: #222; color: #bada55');
+
+        get(url, data => {
             if (!data || Object.keys(data).length == 0) {
                 console.log('%c OH, peer network does not have resource. ', 'background: #222; color: #bada55');
                 callback()
