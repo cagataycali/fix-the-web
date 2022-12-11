@@ -9,7 +9,7 @@
   "author": "Çağatay Çalı",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gun": "^0.2019.1120"
   }
 }
